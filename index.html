@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank Reddy Kandimalla - AI & ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: var(--secondary-color);" />
+                <stop offset="100%" style="stop-color: #00b894;" />
+            </linearGradient>
+        </defs>
+    </svg>
+    <style>
+        .emoji-container {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .love-emoji {
+            position: absolute;
+            font-size: 24px;
+            animation: floatUp 1.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.5);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .date-me-popup {
+            position: fixed;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transform: scale(0);
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 1000;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .date-me-popup.show {
+            transform: scale(1);
+        }
+
+        .date-me-popup:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #ff8e8e, #ff6b6b);
+        }
+
+        .date-me-popup i {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-photo">
+                    <img src="./IMG_2887.JPG" alt="Shashank Reddy Kandimalla" class="profile-img">
+                </div>
+            </div>
+            <h1 class="animate-text">Shashank Reddy Kandimalla</h1>
+            <h2 class="animate-text">AI, ML & MLOps Engineer</h2>
+            <p class="tagline animate-text">Looking for opportunities in AI, Machine Learning, Data Science, and MLOps</p>
+            
+            <div class="social-links animate-text">
+                <a href="https://www.linkedin.com/in/shashank-reddy-k-0ba565107/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/shashankchintu99" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://huggingface.co/shashankkandimalla" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-robot"></i>
+                    <span>HuggingFace</span>
+                </a>
+            </div>
+
+            <div class="contact-info animate-text">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>shashank.kandimalla@sjsu.edu</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 (510) 789-5706</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <div class="download-container">
+                    <a href="./Shashank_Reddy_Resume.pdf" class="download-button" download>
+                        <span class="button-text">Download Resume</span>
+                        <div class="particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </a>
+                </div>
+                <a href="#contact" class="contact-btn">
+                    <i class="fas fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+        </div>
+        <div class="wave-container">
+            <img src="assets/images/wave.svg" alt="Wave" class="wave">
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="highlight-text">👋 Hello! I'm Shashank Reddy Kandimalla, a passionate Machine Learning Engineer and graduate student at San Jose State University.</p>
+                    
+                    <p class="about-description">My journey in technology began with a fascination for how artificial intelligence could transform the way we live and work. Currently pursuing my Master's in Applied Data Science, I've had the privilege of working on cutting-edge AI projects that push the boundaries of what's possible.</p>
+
+                    <p class="about-description">I thrive on solving complex problems and have a particular interest in building enterprise-scale AI systems. My recent work has focused on developing efficient RAG (Retrieval-Augmented Generation) systems and fine-tuning large language models, where I've achieved significant improvements in both performance and accuracy.</p>
+
+                    <p class="about-description">When I'm not coding or experimenting with new AI models, you'll find me exploring the latest developments in the tech world, contributing to open-source projects, or sharing my knowledge through technical writing and mentoring.</p>
+
+                    <h3 class="skills-title">Technical Expertise</h3>
+                    <div class="focus-areas">
+                        <div class="focus-area">
+                            <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                            <ul>
+                                <li>Deep Learning Architectures</li>
+                                <li>Computer Vision Systems</li>
+                                <li>Natural Language Processing</li>
+                                <li>Reinforcement Learning</li>
+                            </ul>
+                        </div>
+                        <div class="focus-area">
+                            <h3><i class="fas fa-code"></i> Development</h3>
+                            <ul>
+                                <li>Full-Stack Development</li>
+                                <li>MLOps & DevOps</li>
+                                <li>Cloud Architecture</li>
+                                <li>System Design</li>
+                            </ul>
+                        </div>
+                        <div class="focus-area">
+                            <h3><i class="fas fa-chart-line"></i> Data Science</h3>
+                            <ul>
+                                <li>Statistical Analysis</li>
+                                <li>Data Visualization</li>
+                                <li>Predictive Modeling</li>
+                                <li>Big Data Processing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag"><i class="fab fa-python"></i></span>
+                        <span class="tech-tag"><i class="fab fa-aws"></i></span>
+                        <span class="tech-tag"><i class="fab fa-docker"></i></span>
+                        <span class="tech-tag"><i class="fab fa-github"></i></span>
+                        <span class="tech-tag"><i class="fab fa-linux"></i></span>
+                        <span class="tech-tag"><i class="fas fa-database"></i></span>
+                    </div>
+
+                    <div class="interests">
+                        <div class="interest-tags">
+                            <span class="interest-tag">🧠 AI Research</span>
+                            <span class="interest-tag">🤖 Robotics</span>
+                            <span class="interest-tag">👁️ Computer Vision</span>
+                            <span class="interest-tag">💬 NLP</span>
+                            <span class="interest-tag">⚙️ MLOps</span>
+                            <span class="interest-tag">📱 Edge AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Aug 2024 - Present</span>
+                        <h3 class="timeline-title">AI Engineer Intern</h3>
+                        <h4 class="timeline-subtitle">Astranetix Inc, San Jose, US</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-achievements">
+                            <li>Architected a multimodal RAG system using Flask, Weaviate, and OpenAI with HNSW indexing handling 200+ queries/minute (3x increase)</li>
+                            <li>Leveraged AWS Lambda for processing 50K+ PDF pages monthly with 99.9% uptime on EC2/NGinx infrastructure, reducing latency by 65%</li>
+                            <li>Engineered deduplication using vector store hash tables eliminating 27% redundant content and implemented hybrid search with 42% improvement in relevance</li>
+                            <li>Developed custom Weaviate schema achieving 85% information retrieval precision and reduced response time from 2.8s to 0.9s</li>
+                            <li>Architected prompt optimization pipeline reducing Claude token consumption by 70%</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-skills">
+                        <span class="timeline-skill">RAG</span>
+                        <span class="timeline-skill">Flask</span>
+                        <span class="timeline-skill">Weaviate</span>
+                        <span class="timeline-skill">AWS</span>
+                        <span class="timeline-skill">OpenAI</span>
+                        <span class="timeline-skill">Vector DB</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Jun 2024 - Aug 2024</span>
+                        <h3 class="timeline-title">AI Product Engineer Intern</h3>
+                        <h4 class="timeline-subtitle">Flatirons AI, San Jose, US</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-achievements">
+                            <li>Spearheaded NLP pipeline with Microsoft GraphRAG, reducing query latency by 57% and improving throughput by 78%</li>
+                            <li>Led AI architecture design and implementation of fine-tuning pipelines for Llama 3.1 using ORPO and SFT+DPO approaches</li>
+                            <li>Implemented haystack agent-based learning system improving model accuracy from 76% to 91%</li>
+                            <li>Architected microservices with CI/CD pipelines handling 1k+ daily inference requests</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-skills">
+                        <span class="timeline-skill">LLMs</span>
+                        <span class="timeline-skill">Azure</span>
+                        <span class="timeline-skill">GraphRAG</span>
+                        <span class="timeline-skill">Docker</span>
+                        <span class="timeline-skill">CI/CD</span>
+                        <span class="timeline-skill">Haystack</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-header">
+                        <span class="timeline-date">Feb 2020 - Dec 2022</span>
+                        <h3 class="timeline-title">Data Scientist</h3>
+                        <h4 class="timeline-subtitle">Infosys Ltd, Hyderabad, India</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <ul class="timeline-achievements">
+                            <li>Collaborated on batch processing improving legal outcomes prediction accuracy by 35%</li>
+                            <li>Utilized LSTM, Prophet, and XGBoost for time series analysis, achieving 25% performance boost</li>
+                            <li>Managed model artifacts and experiment tracking, reducing development time by 40%</li>
+                            <li>Developed high-throughput APIs enhancing performance by 30% with sub-second response times</li>
+                            <li>Implemented A/B testing maintaining 95% accuracy and 97% reliability</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-skills">
+                        <span class="timeline-skill">Machine Learning</span>
+                        <span class="timeline-skill">LSTM</span>
+                        <span class="timeline-skill">Prophet</span>
+                        <span class="timeline-skill">XGBoost</span>
+                        <span class="timeline-skill">API Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-transition"></div>
+        <div class="section-content">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <ul>
+                        <li><i class="fas fa-cloud"></i> AWS Services</li>
+                        <li><i class="fas fa-server"></i> Azure</li>
+                        <li><i class="fas fa-network-wired"></i> Microservices</li>
+                        <li><i class="fas fa-shield-alt"></i> Security Best Practices</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Engineering</h3>
+                    <ul>
+                        <li><i class="fas fa-database"></i> Data Warehousing</li>
+                        <li><i class="fas fa-stream"></i> Data Pipelines</li>
+                        <li><i class="fas fa-exchange-alt"></i> ETL Processes</li>
+                        <li><i class="fas fa-table"></i> Data Modeling</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Development Practices</h3>
+                    <ul>
+                        <li><i class="fas fa-code-branch"></i> Version Control</li>
+                        <li><i class="fas fa-bug"></i> Debug & Optimization</li>
+                        <li><i class="fas fa-project-diagram"></i> System Design</li>
+                        <li><i class="fas fa-users-cog"></i> Team Collaboration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-comments"></i> Communication</li>
+                        <li><i class="fas fa-tasks"></i> Project Management</li>
+                        <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+                        <li><i class="fas fa-users"></i> Team Leadership</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-transition"></div>
+        <div class="section-content">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Sneaker Price Prediction Project -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <h3>AI Sneaker Price Predictor</h3>
+                        <p>Developed an innovative sneaker price prediction system using CrewAI agents for accurate 30-day market forecasts.</p>
+                        <div class="project-tech">
+                            <span>CrewAI</span>
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Time Series</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>30-Day Forecasting</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-robot"></i>
+                                <span>Multi-Agent System</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-hover">
+                        <div class="hover-content">
+                            <p>Key Features:</p>
+                            <ul>
+                                <li>Real-time market data integration</li>
+                                <li>Multi-agent price analysis</li>
+                                <li>Trend prediction algorithms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLaMA Fine-tuning Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Financial LLaMA 3.1</h3>
+                        <p>Fine-tuned LLaMA 3.1 on financial policies using Unsloth LoRA, implementing SFT and DPO techniques.</p>
+                        <div class="project-tech">
+                            <span>LLaMA</span>
+                            <span>LoRA</span>
+                            <span>PyTorch</span>
+                            <span>Unsloth</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>SFT Training</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>DPO Implementation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-hover">
+                        <div class="hover-content">
+                            <p>Achievements:</p>
+                            <ul>
+                                <li>Enhanced financial policy understanding</li>
+                                <li>Optimized training efficiency</li>
+                                <li>Improved response alignment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="section-transition"></div>
+        <div class="section-content">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Master of Applied Data Science</h3>
+                    <h4>San Jose State University</h4>
+                    <p class="date">Jan 2023 - Dec 2024</p>
+                    <p class="grade">GPA: 3.6/4.0</p>
+                </div>
+                <div class="education-card">
+                    <h3>Bachelor of Technology</h3>
+                    <h4>Sri Indu College of Engineering and Technology</h4>
+                    <p class="date">Aug 2016 - Sep 2020</p>
+                    <p class="grade">CGPA: 8.9/10</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="section-transition"></div>
+        <div class="section-content">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <i class="fab fa-google"></i>
+                    <h3>Google Cloud Certified</h3>
+                    <p>Professional Machine Learning Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-transition"></div>
+        <div class="section-content">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p>Let's connect! I'm always interested in discussing AI/ML opportunities and collaborations.</p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/shashank-reddy-k-0ba565107/" class="contact-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/shashankchintu99" class="contact-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://huggingface.co/shashankkandimalla" class="contact-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-robot"></i> HuggingFace
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shashank Reddy Kandimalla. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="./background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="music-toggle">
+        <i class="fas fa-volume-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+    <script src="assets/js/music.js"></script>
+    <script>
+        // Function to create and animate emojis
+        function createEmojis(x, y, isSmileys) {
+            const loveEmojis = ['❤️', '💖', '💝', '💕', '💗'];
+            const smileyEmojis = ['😊', '😄', '😃', '🥰', '😍'];
+            const emojis = isSmileys ? smileyEmojis : loveEmojis;
+            
+            const container = document.createElement('div');
+            container.className = 'emoji-container';
+            container.style.left = x + 'px';
+            container.style.top = y + 'px';
+            
+            for (let i = 0; i < 5; i++) {
+                const emoji = document.createElement('div');
+                emoji.className = 'love-emoji';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = (Math.random() * 60 - 30) + 'px';
+                emoji.style.animationDelay = (Math.random() * 0.5) + 's';
+                container.appendChild(emoji);
+            }
+            
+            document.body.appendChild(container);
+            setTimeout(() => {
+                document.body.removeChild(container);
+            }, 2000);
+        }
+
+        // Create and show date me popup
+        function showDateMePopup(x, y) {
+            // Remove any existing popup
+            const existingPopup = document.querySelector('.date-me-popup');
+            if (existingPopup) {
+                existingPopup.remove();
+            }
+
+            const popup = document.createElement('a');
+            popup.href = 'https://www.instagram.com/shashankkandimalla/'; // Replace with your Instagram URL
+            popup.target = '_blank';
+            popup.className = 'date-me-popup';
+            popup.innerHTML = '<i class="fas fa-heart"></i> Date Me?';
+            
+            // Position the popup near the click
+            popup.style.left = (x - 60) + 'px';
+            popup.style.top = (y - 60) + 'px';
+            
+            document.body.appendChild(popup);
+            
+            // Trigger animation
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 50);
+
+            // Remove popup after 3 seconds
+            setTimeout(() => {
+                popup.classList.remove('show');
+                setTimeout(() => {
+                    popup.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Add click event listener to profile photo
+        let clickCount = 0;
+        document.querySelector('.profile-photo').addEventListener('click', function(e) {
+            clickCount++;
+            const rect = this.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            // Show emojis
+            const showSmileys = clickCount > 3;
+            createEmojis(centerX, centerY, showSmileys);
+            
+            // Show date me popup
+            showDateMePopup(centerX, centerY);
+            
+            // Reset click count after 5 seconds of no clicks
+            clearTimeout(this.resetTimeout);
+            this.resetTimeout = setTimeout(() => {
+                clickCount = 0;
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
